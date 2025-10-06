@@ -177,8 +177,10 @@ const OrderManagement = () => {
           response = await orderManagementAPI.updateOrderStatus(orderId, newStatus)
           break
         case 'assignDriver':
-          response = await orderManagementAPI.assignDriver(orderId, selectedDriverId)
-          break
+            response = await orderManagementAPI.assignDriver(orderId, selectedDriverId)
+            // Change status to confirmed when assigning driver
+            await orderManagementAPI.updateOrderStatus(orderId, 'confirmed')
+            break
         case 'cancel':
           response = await orderManagementAPI.cancelOrder(orderId)
           break
