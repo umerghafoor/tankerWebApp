@@ -29,3 +29,4 @@ const RealtimeIndicator = ({ connected, loading = false }) => {
 }
 
 export default RealtimeIndicator
+

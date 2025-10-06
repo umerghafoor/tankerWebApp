@@ -76,3 +76,4 @@ const NotificationSystem = ({ notifications, onRemoveNotification }) => {
 }
 
 export default NotificationSystem
+
